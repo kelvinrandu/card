@@ -58,7 +58,7 @@ export function Card(props: Iprops) {
           </Box>
         </Box>
 
-        <Box display='flex' mt='2' alignItems='center'>
+        <Box fontFamily={'Plus Jakarta Sans'} display='flex' mt='2' alignItems='center'>
 
           {Array(5)
             .fill('')
