@@ -1,7 +1,6 @@
 
 import { Box, Image, Badge, Icon } from '@chakra-ui/react'
 import { FaStar } from "react-icons/fa";
-import { useColorModeValue } from './ui/color-mode'
 
 type Iprops = {
   id?:string;
@@ -44,7 +43,6 @@ export function Card(props: Iprops) {
           fontWeight={500}
           as='h4'
           fontFamily={'Plus Jakarta Sans'}
-          color={ useColorModeValue('#171717', 'white')}
           fontSize={'16px'}
           lineHeight='24px'
           letterSpacing={'-0.4px'}
