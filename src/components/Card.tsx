@@ -1,8 +1,10 @@
 
 import { Box, Image, Badge, Icon } from '@chakra-ui/react'
 import { FaStar } from "react-icons/fa";
+import { useColorModeValue } from './ui/color-mode'
 
 type Iprops = {
+  id?:string;
   name?: string;
   src?: string;
   badge?: string;
@@ -13,12 +15,14 @@ type Iprops = {
 };
 export function Card(props: Iprops) {
 
-  const { name, src, alt, badge, distance, rating, reviewCount } = props
+  const { id,name, src, alt, badge, distance, rating, reviewCount } = props
+
+  const _id= Math.floor(Math.random() * (1000 - 1)) ; 
 
 
 
   return (
-    <Box boxShadow={'0px 4px 20px 0px #0000001A;'} maxW='sm' borderWidth='1px' borderRadius='10px' overflow='hidden'>
+    <Box key={id?id:_id} boxShadow={'0px 4px 20px 0px #0000001A;'} maxW='sm' borderWidth='1px' borderRadius='10px' overflow='hidden'>
       <Image h={100} borderRadius='15px' padding={'10px'} width={'100%'} src={src ? src : 'https://bit.ly/2Z4KKcF'} alt={alt ? alt : 'Rear view of modern home with pool'} />
 
       <Box p='4'>
@@ -40,7 +44,7 @@ export function Card(props: Iprops) {
           fontWeight={500}
           as='h4'
           fontFamily={'Plus Jakarta Sans'}
-          color={'#171717'}
+          color={ useColorModeValue('#171717', 'white')}
           fontSize={'16px'}
           lineHeight='24px'
           letterSpacing={'-0.4px'}

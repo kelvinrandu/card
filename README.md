@@ -41,6 +41,7 @@ export default App
 
 | Props        | Type        | Description |
 | ------------- |:-------------:| -----:|
+| id   |   string  |  key    | 
 | name   |   string  |  name of product      | 
 | src   |  string   |  image source      | 
 | badge   |  string   |  string to be shown in badge    | 
